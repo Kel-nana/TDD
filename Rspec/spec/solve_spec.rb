@@ -1,8 +1,8 @@
-require "rspec"
-require_relative '../../solve.rb'
+require 'rspec'
+require_relative '../../solve'
 
 describe 'test Solve class methods' do
-  let (:solver) { Solver.new }
+  let(:solver) { Solver.new }
   describe 'Test the factorial method' do
     it 'Should take an integer' do
       expect(solver).to receive(:factorial).with(an_instance_of(Integer))
@@ -18,18 +18,18 @@ describe 'test Solve class methods' do
     end
 
     it 'Should raise an argument error for negative values' do
-      expect{solver.factorial(-4)}.to raise_error(ArgumentError, 'Factorial does not defined negative numbers')
+      expect { solver.factorial(-4) }.to raise_error(ArgumentError, 'Factorial does not defined negative numbers')
     end
   end
 
   describe 'Reverse method' do
     it 'Should take a string' do
       expect(solver).to receive(:reverse).with(an_instance_of(String))
-      solver.reverse("hello")
+      solver.reverse('hello')
     end
 
     it 'Sould return a reversed string' do
-      expect(solver.reverse("hello")).to eq("olleh")
+      expect(solver.reverse('hello')).to eq('olleh')
     end
   end
 
@@ -40,15 +40,15 @@ describe 'test Solve class methods' do
     end
 
     it 'Should return FizzBuzz when the argument is divisible by both 3 and 5' do
-      expect(solver.fizz_buzz(15)).to eq("fizzBuzz")
+      expect(solver.fizz_buzz(15)).to eq('fizzBuzz')
     end
 
     it 'Should return Fizz when the argument is divisible by 3' do
-      expect(solver.fizz_buzz(3)).to eq("fizz")
+      expect(solver.fizz_buzz(3)).to eq('fizz')
     end
 
     it 'Should return Buzz when the argument is divisible by 5' do
-      expect(solver.fizz_buzz(5)).to eq("buzz")
+      expect(solver.fizz_buzz(5)).to eq('buzz')
     end
   end
 end

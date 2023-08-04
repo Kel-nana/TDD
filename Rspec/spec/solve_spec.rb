@@ -18,7 +18,7 @@ describe 'test Solve class methods' do
     end
 
     it 'Should raise an argument error for negative values' do
-      expect{solver.factorial(-4)}.to raise_error
+      expect{solver.factorial(-4)}.to raise_error(ArgumentError, 'Factorial does not defined negative numbers')
     end
   end
 

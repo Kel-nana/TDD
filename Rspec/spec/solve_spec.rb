@@ -51,7 +51,7 @@ describe 'test Solve class methods' do
       expect(solver.fizz_buzz(5)).to eq('buzz')
     end
 
-    it 'Should return back the number if it is neigther divisible by 3 and 5' do
+    it ' Should return Num as a string' do
       expect(solver.fizz_buzz(7)).to eq('7')
     end
   end

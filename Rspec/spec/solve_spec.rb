@@ -50,5 +50,9 @@ describe 'test Solve class methods' do
     it 'Should return Buzz when the argument is divisible by 5' do
       expect(solver.fizz_buzz(5)).to eq('buzz')
     end
+
+    it 'Should return back the number if it is neigther divisible by 3 and 5' do
+      expect(solver.fizz_buzz(7)).to eq('7')
+    end
   end
 end
